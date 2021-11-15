@@ -32,7 +32,7 @@
       use_env_variable : "DATABASE_URL", //heroku addons
       dialect:"postgres",
       dialectOptions: {
-        ssl: false,
+        ssl: true,
       },
       pool: {
         max: 5,
