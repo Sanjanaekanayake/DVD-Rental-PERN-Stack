@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const dbConfig = require(__dirname + '/../../config/config.js')["connectionString"];
+const dbConfig = require(__dirname + '/../../config/config.js')[env];
 console.log(dbConfig);
 
 const Sequelize = require("sequelize");
