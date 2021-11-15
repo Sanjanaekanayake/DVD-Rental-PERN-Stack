@@ -20,6 +20,9 @@ const devConfig = {
 const proConfig = {
   use_env_variable : process.env.DATABASE_URL, //heroku addons
   dialect:"postgres",
+  dialectOptions: {
+    ssl: true,
+  },
   pool: {
     max: 5,
     min: 0,
