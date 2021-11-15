@@ -3,25 +3,25 @@ const fs = require('fs');
 const path = require('path');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const dbConfig = require(__dirname + '/../../config/config.js')[env];
-console.log(dbConfig);
+const config = require(__dirname + '/../../config/config.js')[env];
+console.log(config);
 
 const Sequelize = require("sequelize");
 let sequelize;
 
-if (dbConfig.use_env_variable) {
-  sequelize = new Sequelize(dbConfig.use_env_variable,dbConfig);
+if (config.use_env_variable) {
+  sequelize = new Sequelize(process.env[config.use_env_variable],config);
 
 } else {
-  sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
-    host: dbConfig.HOST,
-    dialect: dbConfig.dialect,
+  sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD, {
+    host: config.HOST,
+    dialect: config.dialect,
     operatorsAliases: false,
     define: {
       timestamps: true,
       freezeTableName: true
     },
-    pool :dbConfig.pool
+    pool :config.pool
   
   });
 }
