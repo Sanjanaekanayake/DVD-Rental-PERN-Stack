@@ -32,7 +32,7 @@
       use_env_variable : process.env.DATABASE_URL, //heroku addons
       dialect:process.env.PG_DIALECT,
       dialectOptions: {
-        ssl: true,
+        ssl: false,
       },
       pool: {
         max: 5,
