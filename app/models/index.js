@@ -120,14 +120,14 @@ db.payment.belongsTo(db.customer, {
   as: "customer",
 });
 
-db.rental.hasMany(db.payment, { 
-  as: "payment" ,
-  foreignKey: 'rental_id',
-});
-db.payment.belongsTo(db.rental, {
-  foreignKey: "rental_id",
-  as: "rental",
-});
+// db.rental.hasMany(db.payment, { 
+//   as: "payment" ,
+//   foreignKey: 'rental_id',
+// });
+// db.payment.belongsTo(db.rental, {
+//   foreignKey: "rental_id",
+//   as: "rental",
+// });
 
 db.film.belongsToMany(db.category, {
   through: db.film_category,
