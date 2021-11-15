@@ -1,50 +1,43 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
-const Sequelize = require('sequelize');
-const basename = path.basename(__filename);
-const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../../config/config.json')[env];
+const dbConfig = require("../../config/config.js");
 
-const db = {};
-console.log(config);
-
+const Sequelize = require("sequelize");
 let sequelize;
-if (config.use_env_variable) {
-  sequelize = new Sequelize(config.use_env_variable, config);
+
+if (dbConfig.connectionString.use_env_variable) {
+  sequelize = new Sequelize(dbConfig.connectionString.use_env_variable);
+
 } else {
-  sequelize = new Sequelize(config.database, config.username, config.password, {
-    host: config.host,
-    dialect: config.dialect,
+  sequelize = new Sequelize(dbConfig.connectionString.DB, dbConfig.connectionString.USER, dbConfig.connectionString.PASSWORD, {
+    host: dbConfig.connectionString.HOST,
+    dialect: dbConfig.connectionString.dialect,
     operatorsAliases: false,
     define: {
-        timestamps: true,
-        freezeTableName: true
+      timestamps: true,
+      freezeTableName: true
     },
-    pool :config.pool
-    
-    });
+    pool :dbConfig.connectionString.pool
+  
+  });
 }
 
-// fs
-//   .readdirSync(__dirname)
-//   .filter(file => {
-//     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
-//   })
-//   .forEach(file => {
-//     const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
-//     db[model.name] = model;
-//   });
+// const sequelize = new Sequelize(dbConfig.connectionString.DB, dbConfig.connectionString.USER, dbConfig.connectionString.PASSWORD, {
+//   host: dbConfig.connectionString.HOST,
+//   dialect: dbConfig.connectionString.dialect,
+//   operatorsAliases: false,
+//   define: {
+//     timestamps: true,
+//     freezeTableName: true
+//   },
+//   pool :dbConfig.connectionString.pool
 
-// Object.keys(db).forEach(modelName => {
-//   if (db[modelName].associate) {
-//     db[modelName].associate(db);
-//   }
 // });
 
-db.sequelize = sequelize;
+const db = {};
+
 db.Sequelize = Sequelize;
+db.sequelize = sequelize;
 
 db.actor = require("./actor.model.js")(sequelize, Sequelize);
 db.film = require("./film.model.js")(sequelize, Sequelize);
@@ -117,14 +110,14 @@ db.payment.belongsTo(db.customer, {
   as: "customer",
 });
 
-// db.rental.hasMany(db.payment, { 
-//   as: "payment" ,
-//   foreignKey: 'rental_id',
-// });
-// db.payment.belongsTo(db.rental, {
-//   foreignKey: "rental_id",
-//   as: "rental",
-// });
+db.rental.hasMany(db.payment, { 
+  as: "payment" ,
+  foreignKey: 'rental_id',
+});
+db.payment.belongsTo(db.rental, {
+  foreignKey: "rental_id",
+  as: "rental",
+});
 
 db.film.belongsToMany(db.category, {
   through: db.film_category,
