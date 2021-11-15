@@ -6,7 +6,7 @@ const Sequelize = require("sequelize");
 let sequelize;
 
 if (dbConfig.connectionString.use_env_variable) {
-  sequelize = new Sequelize(dbConfig.connectionString.use_env_variable);
+  sequelize = new Sequelize(dbConfig.connectionString.use_env_variable,dbConfig.connectionString.dialect);
 
 } else {
   sequelize = new Sequelize(dbConfig.connectionString.DB, dbConfig.connectionString.USER, dbConfig.connectionString.PASSWORD, {
