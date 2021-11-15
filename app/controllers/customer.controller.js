@@ -10,9 +10,9 @@ exports.findAll = async(req, res) => {
           model: Rental,
           as: "rental",
           attributes: ['return_date','customer_id'],
-          where: {
-              return_date: null
-          }
+          // where: {
+          //     return_date: null
+          // }
         }],
   
       }).then((customers) => {
