@@ -29,7 +29,7 @@
     }
   },
   production: {
-      use_env_variable : process.env.DATABASE_URL, //heroku addons
+      use_env_variable : "DATABASE_URL", //heroku addons
       dialect:"postgres",
       dialectOptions: {
         ssl: false,
