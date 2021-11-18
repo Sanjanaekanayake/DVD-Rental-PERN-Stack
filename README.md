@@ -1,7 +1,7 @@
 # :zap: PERN Full Stack CRUD App
 
 * PostgreSQL Express React Node (PERN) full-stack app, integrates React frontend with Node.js backend.
-* 
+
 * **Note:** to view the app use the below link
 
 ![GitHub repo size](https://dvd-rental-pern-stack.herokuapp.com/)
@@ -9,7 +9,7 @@
 ## :page_facing_up: Table of contents
 
 * [General info](#general-info)
-* [Screenshots](#ER Diagram)
+* [Screenshots](#ER-Diagram)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
@@ -27,7 +27,7 @@
 * [JavaScript XML (JSX)](https://reactjs.org/docs/introducing-jsx.html) used to write HTML elements in Javascript
 * [React Fragments](https://reactjs.org/docs/fragments.html) used to show table of todos as a row with columns in the DOM
 
-## ER Diagram
+## :camera: ER Diagram
 
 ![image](https://user-images.githubusercontent.com/40081027/142426947-4f202d60-df40-4483-9041-afd18f51e894.png)
 
