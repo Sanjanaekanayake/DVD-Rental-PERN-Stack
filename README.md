@@ -2,9 +2,9 @@
 
 * PostgreSQL Express React Node (PERN) full-stack app, integrates React frontend with Node.js backend.
 
-* **Note:** to view the app use the below link
+**Note:** to view the app use the below link
 
-![GitHub repo size](https://dvd-rental-pern-stack.herokuapp.com/)
+![Deployed App](https://dvd-rental-pern-stack.herokuapp.com/)
 
 ## :page_facing_up: Table of contents
 
@@ -45,7 +45,7 @@
 
 * [React framework v17](https://reactjs.org/)
 * [Bootstrap v5](https://getbootstrap.com/) component library
-* [Axios](https://axios-http.com/)to make HTTP requests from node. js
+* [Axios](https://axios-http.com/) to make HTTP requests from node. js
 
 ## :floppy_disk: Setup - Backend
 
