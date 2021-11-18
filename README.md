@@ -23,7 +23,7 @@
 
 ### Frontend
 
-* React frontend includes a simple customer detail list with a user input form. User can edit and delete customers.
+* React frontend includes a simple customer detail list with a user input form. User can add, edit and delete customers.
 * [JavaScript XML (JSX)](https://reactjs.org/docs/introducing-jsx.html) used to write HTML elements in Javascript
 * [React useState and UseEffect Hooks](https://reactjs.org/docs/hooks-intro.html)is used to add state to function component and to perform side effects from a function component 
 
