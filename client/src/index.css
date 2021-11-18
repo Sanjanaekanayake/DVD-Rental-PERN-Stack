@@ -15,6 +15,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  /* background-color: rgb(108, 108, 145) */
 }
 
 .App {
@@ -52,10 +54,14 @@ main {
 footer {
   width: 100%;
   padding: 0.25em;
-  background-color: mediumblue;
+  background-color: black;
   color: aliceblue;
   display: grid;
   place-content: center;
+  align-content: center;
+  position:fixed;
+  bottom: 0;
+  
 }
 
 ul {
@@ -142,16 +148,18 @@ ul li::before {
   outline: none;
 }
 
-button {
+button{
   height: 48px;
   min-width: 48px;
   border-radius: 0.25rem;
   padding: 0.1rem;
   font-size: 1rem;
-  background-color: aliceblue;
+  background-color: rgb(9, 82, 63);
   color: mediumblue;
   cursor: pointer;
 }
+
+
 
 button:focus, 
 button:hover {
@@ -182,4 +190,20 @@ button:hover {
   padding: 0.25rem;
   border-radius: 0.25rem;
   outline: none;
+}
+
+.list {
+  text-align: left;
+  max-width: 750px;
+  margin: auto;
+}
+
+.submit-form {
+  max-width: 300px;
+  margin: auto;
+}
+
+.edit-form {
+  max-width: 300px;
+  margin: auto;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CustomerDataService from "../services/customer.service";
-import { FaPaperPlane } from 'react-icons/fa';
+import { Link } from "react-router-dom"; 
 
 export default class AddCustomer extends Component {
   constructor(props) {
@@ -27,7 +27,8 @@ export default class AddCustomer extends Component {
       activebool:false,
       create_date:null,         
       last_update:null,
-      active:1
+      active:1,
+      submitted: false
     
   };
 }
@@ -114,7 +115,8 @@ onChangeStore_id(e) {
           activebool:response.data.activebool,
           create_date:response.data.create_date,         
           last_update:response.data.last_update,
-          active:response.data.active
+          active:response.data.active,
+          submitted: true
 
           
         });
@@ -136,19 +138,35 @@ onChangeStore_id(e) {
       activebool:false,
       create_date:null,         
       last_update:null,
-      active:1
+      active:1,
+      submitted: false
     });
   }
 
   render() {
     return (
       <div className="submit-form">
-        {this.state.activebool ? (
-          <div>
-            <h4>Customer Modified successfully!</h4>
+        {this.state.submitted ? (
+          <div className = "submit-msg" style={{
+            position: 'absolute', left: '50%', top: '50%',
+            transform: 'translate(-50%, -50%)'
+          }}>
+            <h4>Customer Added successfully!</h4>
+
+            <br /><br />
+
+            <div className = "nav-btn" style={{
+            position: 'absolute', left: '50%',
+            transform: 'translate(-50%, -50%)'
+            }}>
+              
             <button className="btn btn-success" onClick={this.newCustomer}>
               Add
             </button>
+            &nbsp;&nbsp;&nbsp;
+            <Link to="/customers" className="btn btn-primary">Customers</Link>
+            </div>
+            
           </div>
         ) : (
           <div>
@@ -268,15 +286,16 @@ onChangeStore_id(e) {
                 name="active"
               />
             </div>
-
-            {/* <button onClick={this.saveCustomer} className="btn btn-success">
+            
+              <br />
+            <button onClick={this.saveCustomer} className="btn btn-success">
               Submit
-            </button> */}
-            <FaPaperPlane
+            </button>
+            {/* <FaPaperPlane
               onClick={this.saveCustomer}
               role="button"
               tabIndex="0"
-            />
+            /> */}
           </div>
         )}
       </div>

@@ -7,29 +7,31 @@ class CustomerDataService {
   }
 
   get(id) {
-    return http.get(`/customers/${id}`);
+    return http.get(`/customer/${id}`);
   }
 
   create(data) {
-    console.log("customer srvice create is called");
+    
     console.log(data);
     return http.post("/createCustomers", data);
   }
 
-  update(id, data) {
-    return http.put(`/customers/${id}`, data);
+  update(customer_id, data) {
+    
+    return http.put(`/customers/${customer_id}`, data);
   }
 
-  delete(id) {
-    return http.delete(`/customers/${id}`);
+  delete(customer_id) {
+    console.log(customer_id);
+    return http.delete(`/customers/${customer_id}`);
   }
 
   deleteAll() {
     return http.delete(`/customers`);
   }
 
-  findByTitle(name) {
-    return http.get(`/customers?name=${name}`);
+  findByName(name) {
+    return http.get(`/customers/${name}`);
   }
 }
 

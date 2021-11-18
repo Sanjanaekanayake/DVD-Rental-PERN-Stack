@@ -5,8 +5,10 @@ import "./App.css";
 
 
 import AddCustomer from "./components/addCustomer.component";
+import CustomerList from "./components/customerList.component";
 import Customer from "./components/customer.component";
 import Home from "./components/home.component";
+
 
 function App(){
   
@@ -32,19 +34,22 @@ function App(){
         </nav>
 
         <div className="container mt-3">
+          
           <Switch>
             <Route exact path="/home" component={Home} />  
             <Route exact path="/addCustomers" component={AddCustomer} /> 
-            <Route exact path="/customers" component={Customer} />  
+            <Route exact path="/customers" component={CustomerList} />  
+            <Route exact path="/customers/:customer_id" component={Customer} /> 
+          
 
           
           </Switch>
         </div>
-        <div>
+        <div style = {{minHeight:'15vh'}}>
                   
-          {/* <footer>
+          <footer>
             <p>Copyright &copy; {today.getFullYear()}</p>
-          </footer> */}
+          </footer>
         </div>
       </div>
     );
