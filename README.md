@@ -25,7 +25,7 @@
 
 * React frontend includes a simple customer detail list with a user input form. User can edit and delete customers.
 * [JavaScript XML (JSX)](https://reactjs.org/docs/introducing-jsx.html) used to write HTML elements in Javascript
-* [React Fragments](https://reactjs.org/docs/fragments.html) used to show table of todos as a row with columns in the DOM
+* [React useState and UseEffect Hooks](https://reactjs.org/docs/hooks-intro.html) to add state to function component and to perform side effects from a function component 
 
 ## :camera: ER Diagram
 
