@@ -4,7 +4,7 @@
 
 **Note:** to view the app use the below link
 
- **[Deployed App] (https://dvd-rental-pern-stack.herokuapp.com/)**
+       [Deployed App](https://dvd-rental-pern-stack.herokuapp.com/)
 
 ## :page_facing_up: Table of contents
 
