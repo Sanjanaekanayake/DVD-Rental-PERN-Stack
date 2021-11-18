@@ -29,7 +29,7 @@
 
 ## :camera: ER Diagram
 
-[file_folder](https://user-images.githubusercontent.com/40081027/142426947-4f202d60-df40-4483-9041-afd18f51e894.png)
+https://www.postgresqltutorial.com/wp-content/uploads/2018/03/dvd-rental-sample-database-diagram.png
 
 ## :signal_strength: Technologies - Backend
 
@@ -37,15 +37,15 @@
 * [PostgreSQL Installer for Windows](https://www.postgresqltutorial.com/install-postgresql/)
 * [Express.js middleware v4](https://expressjs.com/)
 * [Sequelize ORM v6](https://sequelize.org/)
-* [Sequelize Cli v6](https://sequelize.org/)
 * [Node.js v12](https://nodejs.org/es/)
 * [Nodemon](https://www.npmjs.com/package/nodemon) npm module so backend server will automatically restart after code changes
 * [Postman API](https://www.postman.com/downloads/) to simulate a frontend
 
 ## :signal_strength: Technologies - Frontend
 
-* [React framework v16](https://reactjs.org/)
-* [Bootstrap v4](https://getbootstrap.com/) component library
+* [React framework v17](https://reactjs.org/)
+* [Bootstrap v5](https://getbootstrap.com/) component library
+* [Axios](https://axios-http.com/)to make HTTP requests from node. js
 
 ## :floppy_disk: Setup - Backend
 
