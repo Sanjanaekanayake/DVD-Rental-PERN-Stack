@@ -25,7 +25,7 @@
 
 * React frontend includes a simple customer detail list with a user input form. User can add, edit and delete customers.
 * [JavaScript XML (JSX)](https://reactjs.org/docs/introducing-jsx.html) used to write HTML elements in Javascript
-* [React useState and UseEffect Hooks](https://reactjs.org/docs/hooks-intro.html)is used to add state to function component and to perform side effects from a function component 
+* [React useState and UseEffect Hooks](https://reactjs.org/docs/hooks-intro.html) is used to add state to function component and to perform side effects from a function component 
 
 ## :camera: ER Diagram
 
@@ -38,7 +38,7 @@
 * [Express.js middleware v4](https://expressjs.com/)
 * [Sequelize ORM v6](https://sequelize.org/)
 * [Node.js v12](https://nodejs.org/es/)
-* [Nodemon](https://www.npmjs.com/package/nodemon) npm module so backend server will automatically restart after code changes
+* [Nodemon](https://www.npmjs.com/package/nodemon) to restart backend server automatically after code changes
 * [Postman API](https://www.postman.com/downloads/) to simulate a frontend
 
 ## :signal_strength: Technologies - Frontend
@@ -53,7 +53,7 @@
 * Install dependencies using `npm i`
 * Install [nodemon](https://www.npmjs.com/package/nodemon) globally if you don't already have it
 * Install [PostgreSQL](https://www.postgresql.org/) & run it (requires the password you created during installation)
-* Downlaod sample [databese](https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip) and set it up in your computer by following this [tutorial]  (https://www.postgresqltutorial.com/load-postgresql-sample-database/)
+* Downlaod sample [databese](https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip) and set it up in your computer by following this [tutorial](https://www.postgresqltutorial.com/load-postgresql-sample-database/)
 * Postgresql shell commands: `\l` list all databases. `\c` database1 connect to database1. `\dt` inspect tables. `\d+` inspect table & show relation information. `\q` to quit.
 * Add database access credentials to `config/config.js` - recommend installing [npm dotenv](https://www.npmjs.com/package/dotenv) & using .env to hide credentials if   commiting to Github
 * Run `npm run dev` for a dev server
