@@ -29,7 +29,7 @@
 
 ## :camera: ER Diagram
 
-https://www.postgresqltutorial.com/wp-content/uploads/2018/03/dvd-rental-sample-database-diagram.png
+![image](https://user-images.githubusercontent.com/40081027/142426947-4f202d60-df40-4483-9041-afd18f51e894.png)
 
 ## :signal_strength: Technologies - Backend
 
